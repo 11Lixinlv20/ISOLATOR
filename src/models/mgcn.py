@@ -312,7 +312,7 @@ class MGCN(GeneralRecommender):
 
         return batch_mf_loss + batch_emb_loss + batch_reg_loss + self.cl_loss * cl_loss
 
-    # S-ISOLATOR
+    # U-ISOLATOR
     # def full_sort_predict(self, interaction):
     #     user = interaction[0].type(torch.LongTensor)
 
