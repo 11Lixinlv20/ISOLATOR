@@ -1,9 +1,3 @@
-"""
-Main entry
-# UPDATED: 2022-Feb-15
-##########################
-"""
-
 import os
 import argparse
 from utils.quick_start import quick_start
