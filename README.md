@@ -8,7 +8,7 @@ This repository is the official implementation of "Unveiling the Impact of Multi
 - pyyaml == 6.0
 - scipy == 1.11.4
 ## Quik Start
-1. change model inference startegy under './src/models/'
+1. change model inference startegy(full_sort_predict function) under './src/models/vbpr.py'
 2. Run the following command to train and evaluate the model.
  ```python
    # run the code 
