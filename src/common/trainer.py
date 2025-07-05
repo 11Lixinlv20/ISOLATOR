@@ -245,9 +245,6 @@ class Trainer(AbstractTrainer):
                     self.logger.info(valid_result_output)
                     self.logger.info('test result: \n' + dict2str(test_result))
                 if update_flag:
-                    self.best_rec_list = rec_list
-                    # restore_user_e_np = self.model.restore_user_e
-                    # restore_item_e_np = self.model.restore_item_e
                     update_output = '██ ' + self.config['model'] + '--Best validation results updated!!!'
                     if verbose:
                         self.logger.info(update_output)
@@ -255,19 +252,6 @@ class Trainer(AbstractTrainer):
                     self.best_test_upon_valid = test_result
 
                 if stop_flag:
-                    # best_rec_list = self.best_rec_list
-
-                    # list_filename = '{}_rec_list_{}.npy'.format(self.config['model'],self.config['dataset'])
-                    # save_path = os.path.join('./saved_list/rec_list', list_filename)
-                    # np.save(save_path, best_rec_list)
-                    # useremb_filename = '{}_rec_list_{}_useremb.npy'.format(self.config['model'],self.config['dataset'])
-                    # itememb_filename = '{}_rec_list_{}_itememb.npy'.format(self.config['model'],self.config['dataset'])
-                    # save_path = os.path.join('./saved_list/embedding', useremb_filename)
-                    # restore_user_e_np = restore_user_e_np.detach().cpu().numpy()
-                    # restore_item_e_np = restore_item_e_np.detach().cpu().numpy()
-                    # np.save(save_path, restore_user_e_np)
-                    # save_path = os.path.join('./saved_list/embedding', itememb_filename)
-                    # np.save(save_path, restore_item_e_np)
 
                     stop_output = '+++++Finished training, best eval result in epoch %d' % \
                                   (epoch_idx - self.cur_step * self.eval_step)
